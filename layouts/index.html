@@ -1,0 +1,117 @@
+{{ define "body" }}
+    <body class="{{ if .Site.Params.backgroundImage }} background-image" style="background-image: url('{{ .Site.Params.backgroundImage }}');" {{ else }}"{{ end }}>
+{{ end }}
+
+{{ define "main" }}
+    <main aria-role="main">
+        <div>
+            {{ if .Site.Params.Portrait.Path }}
+               <img src="{{ .Site.Params.Portrait.Path }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
+            {{ end }}
+            <html>
+
+<body>
+    <center><img src="https://i.imgur.com/HFhGrdK.png" width="300" height="300" style="margin-right: 10px;"></center>
+</body>
+
+<html>
+  <body>
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 1000,
+        height: 500,
+        channel: "michealt",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["embed.example.com", "othersite.example.com"]
+      });
+    </script>
+  </body>
+</html>
+
+<html>
+<head>
+    <title>Steam Coming Soon</title>
+    <style>
+        /* Style for the modal popup */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+            padding-top: 100px; /* Location of the modal */
+        }
+
+        /* Modal content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin-top: 20px; display: flex; justify-content: center;">
+        <a href="https://discord.gg/N9PBNZKbN8">
+            <img src="https://i.imgur.com/5yzqX2w.png" width="35" height="30" style="margin-right: 10px;">
+        </a>
+        <a href="https://www.twitch.tv/michealt">
+            <img src="https://i.imgur.com/95ddKaA.png" width="30" height="30" style="margin-left: 10px; margin-right: 10px;">
+        </a>
+        <a href="https://www.patreon.com/OneMansDev">
+            <img src="https://i.imgur.com/oqksjAx.png" width="30" height="30" style="margin-left: 10px; margin-right: 10px;">
+        </a>
+        <a href="#" onclick="openModal()">
+            <img src="https://i.imgur.com/XYWMp5c.png" width="30" height="30" style="margin-left: 10px;">
+        </a>
+    
+        <!-- Modal popup -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span onclick="closeModal()" style="float: right; cursor: pointer;">&times;</span>
+                <p>Coming Soon</p>
+            </div>
+        </div>
+    
+        <script>
+            // Function to open the modal
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+    
+            // Function to close the modal
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+
+            {{ partial "subtitle.html" . }}
+
+            {{- with .Site.Params.social }}
+                <div>
+                    {{ partial "social-icons.html" . }}
+                </div>
+            {{- end }}
+        </div>
+    </main>
+{{ end }}
