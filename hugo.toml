@@ -1,4 +1,4 @@
-baseURL = 'https://michealtgames.github.io/OneMansDev/'
+baseURL = 'https://onemansdev.com'
 languageCode = 'en-us'
 title = 'One Mans Dev'
 theme = 'hello-friend-ng'
