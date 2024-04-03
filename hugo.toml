@@ -28,11 +28,6 @@ publishDir = "docs"
   keywords = "Game Dev, Game Developer, Games"
   images = [""]
 
-[taxonomies]
-    category = "Game Developer"
-    tag      = "tags"
-    series   = "series"
-
 [languages]
   [languages.en]
     title = "One Mans Dev"
@@ -50,9 +45,3 @@ publishDir = "docs"
     #
     # path = "/img/your-example-logo.svg"
     # alt = "Your example logo alt text"
-
-  # And you can even create generic menu
-  [[menu.main]]
-    #identifier = "blog"
-    #name       = "Blog"
-    #url        = "/posts"
