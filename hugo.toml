@@ -23,11 +23,6 @@ publishDir = "docs"
   # Show a global language switcher in the navigation bar
   enableGlobalLanguageMenu = false
 
-  # Metadata mostly used in document's head
-  description = "Game Developer"
-  keywords = "Game Dev, Game Developer, Games"
-  images = [""]
-
 [languages]
   [languages.en]
     title = "One Mans Dev"
